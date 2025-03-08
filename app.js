@@ -1,4 +1,4 @@
-function sortear(){
+function sortear() {
     let quantidadeDeNumeros = Number(document.getElementById('quantidade').value);
     let numeroMinimo = Number(document.getElementById('de').value);
     let numeroMaximo = Number(document.getElementById('ate').value);
@@ -6,9 +6,10 @@ function sortear(){
     let numeroSorteados = [];
     let numero
 
-    for(let i = 0; i < quantidadeDeNumeros; i++){
+    for (let i = 0; i < quantidadeDeNumeros; i++ ) {
         numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
-        while(numeroSorteados.includes(numero));{
+        
+        while(numeroSorteados.includes(numero)){
             numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
         }
        numeroSorteados.push(numero);
@@ -23,7 +24,7 @@ function sorteadorDeNumero(min, max){
 }
 
 function alterarStatusBtn(){
-    const btnReiniciar = document.getElementById('btn-reiniciar');
+    let btnReiniciar = document.getElementById('btn-reiniciar');
     if (btnReiniciar.classList.contains('container__botao-desabilitado')){
         btnReiniciar.classList.remove('container__botao-desabilitado');
         btnReiniciar.classList.add('container__botao')
@@ -31,4 +32,12 @@ function alterarStatusBtn(){
         btnReiniciar.classList.remove('container__botao');
         btnReiniciar.classList.add('container__botao-desabilitado')
     }
+}
+
+function reiniciar(){
+    document.getElementById('quantidade').value = '';
+    document.getElementById('de').value = '';
+    document.getElementById('ate').value = '';
+    document.getElementById('resultado').innerHTML = <label class="texto__paragrafo">Números sorteados:  nenhum até agora</label>;
+    alterarStatusBtn();
 }
