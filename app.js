@@ -8,10 +8,14 @@ function sortear(){
 
     for(let i = 0; i < quantidadeDeNumeros; i++){
         numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
-        numeroSorteados.push(numero)
+        while(numeroSorteados.includes(numero));{
+            numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
+        }
+       
+        numeroSorteados.push(numero);
     } 
     let resultado = document.getElementById('resultado');
-    resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${numeroSorteados}</label>`
+    resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${numeroSorteados}</label>`;
 }
 
 function sorteadorDeNumero(min, max){
