@@ -3,10 +3,6 @@ function sortear(){
     let numeroMinimo = Number(document.getElementById('de').value);
     let numeroMaximo = Number(document.getElementById('ate').value);
 
-    alert(`Quantidade: ${quantidadeDeNumeros}`);
-    alert(`Do número: ${numeroMinimo}`);
-    alert(`Até o número: ${numeroMaximo}`);
-
     let numeroSorteados = [];
     let numero
 
@@ -14,7 +10,8 @@ function sortear(){
         numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
         numeroSorteados.push(numero)
     } 
-    alert(numeroSorteados);
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<label class="texto__paragrafo">Números sorteados: ${numeroSorteados}</label>`
 }
 
 function sorteadorDeNumero(min, max){
