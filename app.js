@@ -6,4 +6,11 @@ function sortear(){
     alert(`Quantidade: ${quantidadeDeNumeros}`);
     alert(`Do número: ${numeroMinimo}`);
     alert(`Até o número: ${numeroMaximo}`);
+
+    let numeroSorteados = sorteadorDeNumero(numeroMinimo, numeroMaximo);
+    alert(numeroSorteados);
+}
+
+function sorteadorDeNumero(min, max){
+    return(Math.floor(Math.random) * (max - min) + min);
 }
