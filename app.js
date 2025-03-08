@@ -7,7 +7,13 @@ function sortear(){
     alert(`Do número: ${numeroMinimo}`);
     alert(`Até o número: ${numeroMaximo}`);
 
-    let numeroSorteados = sorteadorDeNumero(numeroMinimo, numeroMaximo);
+    let numeroSorteados = [];
+    let numero
+
+    for(let i = 0; i < quantidadeDeNumeros; i++){
+        numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
+        numeroSorteados.push(numero)
+    } 
     alert(numeroSorteados);
 }
 
