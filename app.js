@@ -8,7 +8,7 @@ function sortear() {
         return;
     }
 
-    if (quantidadeDeNumeros = 0 || numeroMinimo >= numeroMaximo) {
+    if (quantidadeDeNumeros <= 0 || numeroMinimo >= numeroMaximo) {
         alert('Por favor, verifique os números informados');
         return;
     }
