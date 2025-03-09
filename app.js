@@ -3,7 +3,22 @@ function sortear() {
     const numeroMinimo = Number(document.getElementById('de').value);
     const numeroMaximo = Number(document.getElementById('ate').value);
 
-    let numeroSorteados = [];
+    if (isNaN(quantidadeDeNumeros) || isNaN(numeroMaximo) || isNaN(numeroMinimo)){
+        alert('Os caracteres que você informou não são válidos');
+        return;
+    }
+
+    if (quantidadeDeNumeros = 0 || numeroMinimo >= numeroMaximo) {
+        alert('Por favor, verifique os números informados');
+        return;
+    }
+
+    const intervalo = numeroMaximo - numeroMinimo + 1; 
+        if (quantidadeDeNumeros > intervalo){
+        alert('A quantidade de números informada é maior que o intervalo');
+        return;
+    }
+     let numeroSorteados = [];
 
     for (let i = 0; i < quantidadeDeNumeros; i++ ) {
         let numero = sorteadorDeNumero(numeroMinimo, numeroMaximo);
