@@ -1,7 +1,7 @@
 function sortear() {
-    let quantidadeDeNumeros = Number(document.getElementById('quantidade').value);
-    let numeroMinimo = Number(document.getElementById('de').value);
-    let numeroMaximo = Number(document.getElementById('ate').value);
+    const quantidadeDeNumeros = Number(document.getElementById('quantidade').value);
+    const numeroMinimo = Number(document.getElementById('de').value);
+    const numeroMaximo = Number(document.getElementById('ate').value);
 
     let numeroSorteados = [];
 
