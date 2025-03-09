@@ -7,15 +7,15 @@ Este é um projeto simples para sortear números aleatórios dentro de um interv
 
 ## Como Usar
 
-1. # Clone este repositório:
+1.  Clone este repositório:
    ```sh
    git clone https://github.com/PxS00/sorteador-numeros.git
    ```
-2. # Acesse a pasta do projeto:
+2.  Acesse a pasta do projeto:
    ```sh
    cd sorteador-numeros
    ```
-3. # Abra o arquivo index.html em um navegador para executar o sorteador de números.
+3.  Abra o arquivo index.html em um navegador para executar o sorteador de números.
 
 ## 📝 Sobre
 
